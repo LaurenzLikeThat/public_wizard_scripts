@@ -3,7 +3,6 @@ from time import time, sleep
 
 from wizwalker import XYZ, ClientHandler, Client, Keycode
 from wizwalker.memory import MemoryReader, Window
-from loguru import logger
 from typing import Union, List
 
 
