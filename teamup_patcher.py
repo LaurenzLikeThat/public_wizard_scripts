@@ -18,8 +18,8 @@ async def patch(client:Client) -> List[tuple[int, bytes]]:
     reader = MemoryReader(client._pymem)
 
     async def teamup_kiosk_level_locked_patch():
-        write_bytes = b"\xE9\x49\x04\x00\x00\x90"
-        pattern = rb"\x0F\x84\x48\x04\x00\x00\x0F\x57\xC0"
+        write_bytes = b"\xE9\x90\x05\x00\x00\x90"
+        pattern = rb"\x0F\x84\x8F\x05\x00\x00\x0F\x57\xC0"
         address_oldbytes.append(await readbytes_writebytes(pattern, write_bytes))
 
     await teamup_kiosk_level_locked_patch()
